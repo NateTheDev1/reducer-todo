@@ -12,6 +12,7 @@ const todoReducer = (state, action) => {
             completed: false,
             id: new Date(),
             finishedAt: null,
+            tags: action.tags !== null ? action.tags : null,
           },
         ],
       };
@@ -47,6 +48,7 @@ const initialState = {
       completed: false,
       id: 3892987589,
       finishedAt: null,
+      tags: ["incomplete", "urgent"],
     },
   ],
 };

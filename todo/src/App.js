@@ -19,11 +19,27 @@ function App() {
         <div
           key={idx}
           onClick={() => handleToggle(idx)}
-          style={{ width: "100%" }}
+          style={{
+            width: "50%",
+            margin: "0 auto",
+            border: "1px solid black",
+            marginTop: "2%",
+          }}
         >
           <h3 style={{ textDecoration: t.completed ? "line-through" : "" }}>
-            {t.item}{" "}
+            {t.item}
           </h3>
+          {t.tags.map((tag) => (
+            <span
+              style={{
+                color: "red",
+                border: "1px solid black",
+                marginRight: "1%",
+              }}
+            >
+              {tag}{" "}
+            </span>
+          ))}
           <p style={{ color: "gray", marginTop: "-10px" }}>
             {t.completed ? (
               <p style={{ textDecoration: "none" }}>{t.finishedAt}</p>
