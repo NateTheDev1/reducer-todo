@@ -9,6 +9,7 @@ const TodoForm = ({ dispatch }) => {
     e.preventDefault();
     dispatch({ type: "ADD-TODO", title, tags });
     setTitle("");
+    setTags([]);
   };
 
   const handleClear = () => {
